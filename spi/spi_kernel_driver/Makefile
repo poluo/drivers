@@ -7,8 +7,8 @@ endif
 EXTRA_CFLAGS  += $(DEBFLAGS)
 
 ifneq ($(KERNELRELEASE),)
- 	ccflags-y := -DENABLE_DEBUG
-	obj-m := pt100_dev.o
+ 	ccflags-y := -std=gnu99 -DENABLE_DEBUG
+	obj-m := w25qxx.o
 else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD := $(shell pwd)

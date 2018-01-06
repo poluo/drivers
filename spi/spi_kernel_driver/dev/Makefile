@@ -8,7 +8,7 @@ EXTRA_CFLAGS  += $(DEBFLAGS)
 
 ifneq ($(KERNELRELEASE),)
  	ccflags-y := -DENABLE_DEBUG
-	obj-m := pt100.o
+	obj-m := spi_dev.o
 else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD := $(shell pwd)
