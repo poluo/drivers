@@ -1,6 +1,6 @@
-
 #define MODULE_NAME	"all"
-#define PDEBUG(format, args...) printk(KERN_INFO MODULE_NAME ": " format, ##args)
+
+#define PDEBUG(format, args...) printk(KERN_WARNING MODULE_NAME ": " format, ##args)
 
 extern void test_timer(int data);
 

@@ -5,7 +5,7 @@ mode="666"
 group=0
 
 function load() {
-    insmod ./$module.ko $* || exit 1
+    #insmod ./$module.ko $* || exit 1
 
     rm -f /dev/${device}
 

@@ -8,8 +8,7 @@ EXTRA_CFLAGS  += $(DEBFLAGS)
 
 ifneq ($(KERNELRELEASE),)
  	ccflags-y := -DENABLE_DEBUG
-	all-objs := one.o time_delay.o
-	obj-m := all.o
+	obj-m := one_dev.o
 else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD := $(shell pwd)
